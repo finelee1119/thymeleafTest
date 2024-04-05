@@ -11,15 +11,15 @@
     </ul>
     <!-- 쿼리스트링(쿼리 파라미터) -->
     <ul>
-        <a th:href="@{/hello(name=${name},age=${age})}">query param</a>
+        <a th:href="@{/requestParam(name=${name},age=${age})}">query param</a>
     </ul>
     <!-- 경로변수(Path Variable) -->
     <ul>
-        <a th:href="@{/hello/{name}/{age}(name=${name},age=${age})}">Path Variable</a>
+        <a th:href="@{/pathVariable/{name}/{age}(name=${name},age=${age})}">Path Variable</a>
     </ul>
     <!-- 경로변수(Path Variable) & 쿼리스트링(쿼리 파라미터) -->
     <ul>
-        <a th:href="@{/hello/{name}(name=${name},age=${age})}">Path Variable + query param</a>
+        <a th:href="@{/pathAndQuery/{name}(name=${name},age=${age})}">Path Variable + query param</a>
     </ul>
 </body>
 </html>

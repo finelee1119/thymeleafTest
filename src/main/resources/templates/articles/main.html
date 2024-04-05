@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>LinkTest Page</h1>
+    <ul><a th:href="@{/main}">main</a></ul>
+
+    <ul><a th:href="@{/articles/list}">list all</a></ul>
+    <ul th:with="id=${7}"><a th:href="@{/articles/{id}(id=${id})}">list one</a></ul>
+    <ul th:with="name='Tom', weight=80, height=180"><a th:href="@{/articles/create(name=${name}, weight=${weight}, height=${height})}">new</a></ul>
+    <ul><a th:href="@{/articles/update}">update ok</a></ul>
+    <ul th:with="id=${7}"><a th:href="@{/articles/{id}/update(id=${id})}">update</a></ul>
+    <ul th:with="id=${3}"><a th:href="@{/articles/{id}/delete(id=${id})}">delete</a></ul>
+    <ul th:with="id=${11}"><a th:href="@{/articles/{id}/articleComment(id=${id})}">comment view</a></ul>
+    <ul th:with="id=${15}, commentId=${3}"><a th:href="@{/articles/{id}/articleComment/{commentId}/delete(id=${id},commentId=${commentId})}">comment delete</a></ul>
+</body>
+</html>
