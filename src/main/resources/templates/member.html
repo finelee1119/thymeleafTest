@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Member</h1>
+    <table border="1">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>addr</th>
+            <th>created_at</th>
+        </tr>
+        <tr th:each="member, state : ${members}" th:object="${member}">
+            <td th:text="${state.count}">1</td>
+            <td>
+                <a th:href="@{/}" th:text="*{name}"></a>
+            </td>
+            <td th:text="*{addr}">1</td>
+            <td th:text="*{#temporals.format(created_at, 'yyyy/MM/dd')}">1</td>
+        </tr>
+    </table>
+</body>
+</html>

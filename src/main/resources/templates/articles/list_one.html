@@ -5,7 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>List One</h1>
-    <p>ID : <span th:text="${id}"></span>번 게시글 읽어오기 성공</p>
+<h2>
+    <span th:text="${title}"></span><br>
+    <span th:text="${message}"></span><br>
+</h2>
+<h3>
+    <a th:href="@{/articles/main}">메인으로 돌아가기</a>
+</h3>
 </body>
 </html>

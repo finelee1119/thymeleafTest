@@ -5,11 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>New</h1>
-    <p>
-        <span th:text="${name}"></span>의
-        키는 <span th:text="${height}"></span>,
-        몸무게는 <span th:text="${weight}"></span> 입니다.
-    </p>
+<h2>
+    <span th:text="${title}"></span><br>
+    <span th:text="${message}"></span><br>
+</h2>
+<h3>
+    <a th:href="@{/articles/main}">메인으로 돌아가기</a>
+</h3>
 </body>
 </html>
